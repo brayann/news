@@ -11,6 +11,8 @@ body{
 .searchinput {
     padding:5px;
     margin-right: 10px;
+    width:45%;
+    margin-left:-20px;
 }
 
 .feeds {
