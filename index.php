@@ -10,7 +10,7 @@ use Respect\Rest\Router;
 
 $router = new Router();
 
-$router->post('/load', function () {
+$router->get('/load', function () {
     $controller = new News\NewsController;
     return $controller->process();
 });

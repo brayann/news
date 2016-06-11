@@ -2,9 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>News Feed</title>
+    <link rel="stylesheet" href="/public/css/libs.css" />
+    <link rel="stylesheet" href="/public/css/main.css" />
 </head>
-<body>
-    <h1>news Feed</h1>
+<body ng-app="newsApp">
+    <div ng-controller="MainController" class="container">
+        <div class="header">
+            <input type="text" ng-model="url" class="searchinput" /><button class="btn btn-action" ng-click="getFeed()">Get Feeds</button>
+        </div>
+        <div class="row">
+            <div class="col-xs-offset-5">
+                <img src="/public/img/loader.gif" alt="Loading" class="text-center" ng-show="showLoader">
+            </div>
+        </div>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default" ng-repeat="feed in feeds">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{feed.id}}" class="feedlink">
+                            <img ng-src="{{feed.image}}" alt="Feed Image" width="50px" />
+                            <span class="feedtitle">{{feed.title}}</span>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse{{feed.id}}" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        {{feed.content}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="public/js/libs.js"></script>
+    <script src="public/js/main.js"></script>
 </body>
 </html>

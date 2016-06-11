@@ -1,0 +1,12 @@
+.header{
+    margin:20px;
+}
+
+.feedlink, .feedlink:hover {
+    display: block;
+    text-decoration: none;
+}
+.searchinput {
+    padding:5px;
+    margin-right: 10px;
+}
