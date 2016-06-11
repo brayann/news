@@ -1,7 +1,9 @@
 .header{
     margin:20px;
 }
-
+body{
+    background:#1F77B4;
+}
 .feedlink, .feedlink:hover {
     display: block;
     text-decoration: none;
@@ -9,4 +11,13 @@
 .searchinput {
     padding:5px;
     margin-right: 10px;
+}
+
+.feeds {
+    background: #ededed;
+    border: 1px solid #ccc;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    margin-top:10px;
 }
