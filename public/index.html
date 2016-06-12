@@ -9,7 +9,7 @@
 <body ng-app="newsApp">
     <div ng-controller="MainController" class="container feeds">
         <div class="header">
-            <input type="text" ng-model="url" class="searchinput" />
+            <input type="text" ng-model="url" class="searchinput" placeholder="Place your news feed link here" />
             <button class="btn btn-info" ng-click="getFeed()">Get Feeds</button>
             <button class="btn btn-warning" ng-click="reset()" ng-show="url">Reset</button>
         </div>
